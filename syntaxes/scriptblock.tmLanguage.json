@@ -1,0 +1,128 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "ScriptBlock",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#imports"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#line-comments"
+		},
+		{
+			"include": "#nativefunc"
+		},
+		{
+			"include": "#tags"
+		},
+		{
+			"include": "#operators"
+		},
+		{
+			"include": "#constants"
+		},
+		{
+			"include": "#identifiers"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [
+				{
+				"name": "keyword.control.scriptblock",
+				"match": "(func|script|const|import)"
+				}
+			]
+		},
+		"imports": {
+			"patterns": [
+				{
+				"name": "keyword.other.scriptblock",
+				"match": "\\w+:\\w+"
+				}
+			]
+		},
+		"strings": {
+			"name": "string.quoted.single.scriptblock",
+			"begin": "'",
+			"end": "'",
+			"patterns": [
+				{
+					"name": "constant.character.escape.scriptblock",
+					"match": "\\\\."
+				}
+			]
+		},
+		"nativefunc": {
+			"patterns": [
+				{
+				"name": "variable.language.scriptblock",
+				"match": "<\\w+>"
+				}
+			]
+		},
+		"tags": {
+			"patterns": [
+				{
+				"name": "variable.language.scriptblock",
+				"match": "#\\w+:\\w+"
+				}
+			]
+		},
+		"operators": {
+			"patterns": [
+				{
+				"name": "keyword.operator.arithmetic.scriptblock",
+				"match": "(-|\\+|\\*|/|//|\\^)"
+				}
+			]
+		},
+		"comments": {
+			"name": "comment.block.scriptblock",
+			"begin": "/\\*",
+			"end": "\\*/",
+			"patterns": [
+				{
+					"name": "constant.character.escape.scriptblock",
+					"match": "\\\\."
+				}
+			]
+		},
+		"line-comments": {
+			"name": "comment.line.scriptblock",
+			"begin": "##",
+			"end": "$",
+			"patterns": [
+				{
+					"name": "constant.character.escape.scriptblock",
+					"match": "\\\\."
+				}
+			]
+		},
+		"constants": {
+			"patterns": [
+				{
+				"name": "constant.numeric.scriptblock",
+				"match": "\\d+(\\.\\d+)?"
+				}
+			]
+		},
+		"identifiers": {
+			"patterns": [
+				{
+				"name": "variable.other.scriptblock",
+				"match": "[\\w_]+"
+				}
+			]
+		}
+	},
+	"scopeName": "scriptblock"
+}

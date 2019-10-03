@@ -1,0 +1,30 @@
+{
+    "name": "scriptblock",
+    "displayName": "ScriptBlock",
+    "publisher": "falcinspire",
+    "description": "Syntax highlighting for the ScriptBlock language",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.37.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "scriptblock",
+            "aliases": ["ScriptBlock", "scriptblock"],
+            "extensions": ["sb"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "scriptblock",
+            "scopeName": "scriptblock",
+            "path": "./syntaxes/scriptblock.tmLanguage.json"
+        }],
+        "snippets": [{
+            "language": "scriptblock",
+            "path": "./snippets/snippets.json"
+        }]
+    }
+}

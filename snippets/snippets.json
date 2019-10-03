@@ -1,0 +1,48 @@
+{
+    "Function Definition": {
+        "prefix": [
+          "func",
+          "func-define"
+        ],
+        "body": [
+          "func ${1:name} {",
+          "\t$0",
+          "}"
+        ],
+        "description": "A function definition."
+    },
+    "Script Definition": {
+        "prefix": [
+          "script",
+          "script-define"
+        ],
+        "body": [
+          "script ${1:name} { ($2) ->",
+          "\t$0",
+          "}"
+        ],
+        "description": "A script definition."
+    },
+    "Constant Definition": {
+        "prefix": [
+          "const",
+          "const-define"
+        ],
+        "body": [
+          "const ${1:name} = $0"
+        ],
+        "description": "A constant definition."
+    },
+    "Delay Statement": {
+        "prefix": [
+          "delay",
+          "delay-statement"
+        ],
+        "body": [
+          "delay(${1:ticks}) {",
+          "\t$0",
+          "}"
+        ],
+        "description": "A delay statement."
+    }
+}
